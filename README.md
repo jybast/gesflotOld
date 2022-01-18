@@ -19,9 +19,10 @@ Intégrer Bootstrap 5 dans twig.yaml
 Créer les dossiers /assets (css, img, js, scss) dans /public
 Créer dossiers /uploads (images, documents) et /docs dans /public
 Configurer les chemins d'accès à /uploads/images et /uploads/documents dans services.yaml
-
+Créer un Controller de pages statiques
 Créer l'entité User
 Préparer le système d'authentification et d'enregistrement
-Créer un Controller de pages statiques
+
+
 
 
