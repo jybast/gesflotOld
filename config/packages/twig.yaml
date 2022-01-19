@@ -1,7 +1,10 @@
 twig:
     default_path: '%kernel.project_dir%/templates'
-    # choix du framework pour le frontend
+    # Frontend layout
     form_themes: ['bootstrap_5_layout.html.twig']
+    # Translations
+    globals: 
+        locales: '%app.locales%'
     
 when@test:
     twig:

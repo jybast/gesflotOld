@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
+  <file source-language="en" target-language="fr" datatype="plaintext" original="file.ext">
+    <header>
+      <tool tool-id="symfony" tool-name="Symfony"/>
+    </header>
+    <body>
+      <trans-unit id="hpWlheT" resname="Please Confirm your Email">
+        <source>Please Confirm your Email</source>
+        <target>Merci de confirmer votre e-mail</target>
+      </trans-unit>
+      <trans-unit id="kQWnsB7" resname="Your email address has been verified.">
+        <source>Your email address has been verified.</source>
+        <target>Votre adresse e-mail a été vérifiée.</target>
+      </trans-unit>
+      <trans-unit id="ATJ8qA9" resname="Your password reset request">
+        <source>Your password reset request</source>
+        <target>Votre demande de réinitialisation de mot de passe.</target>
+      </trans-unit>
+      <trans-unit id="OnhpU4i" resname="Home">
+        <source>Home</source>
+        <target>Accueil</target>
+      </trans-unit>
+      <trans-unit id="R6rzG4P" resname="Contact us">
+        <source>Contact us</source>
+        <target>Nous contacter</target>
+      </trans-unit>
+      <trans-unit id="tLWAqa2" resname="About us">
+        <source>About us</source>
+        <target>A propos de nous</target>
+      </trans-unit>
+      <trans-unit id="ScJmuqq" resname="Search">
+        <source>Search</source>
+        <target>Rechercher</target>
+      </trans-unit>
+      <trans-unit id="u3I07BJ" resname="Register">
+        <source>Register</source>
+        <target>S'enregistrer</target>
+      </trans-unit>
+      <trans-unit id="U28cTzJ" resname="Password Reset Email Sent">
+        <source>Password Reset Email Sent</source>
+        <target>E-mail envoyé!</target>
+      </trans-unit>
+      <trans-unit id="FmrMHS6" resname="If an account matching your email exists, then an email was just sent that contains a link that you can use to reset your password.">
+        <source>If an account matching your email exists, then an email was just sent that contains a link that you can use to reset your password.</source>
+        <target>Si un compte e-mail existe, un e-mail contenant un lien pour la modification du mot de passe a été envoyé.</target>
+      </trans-unit>
+      <trans-unit id="87wG9uu" resname="This link will expire in">
+        <source>This link will expire in</source>
+        <target>Ce lien expire dans</target>
+      </trans-unit>
+      <trans-unit id="bs9avOq" resname="If you don't receive an email please check your spam folder or">
+        <source>If you don't receive an email please check your spam folder or</source>
+        <target>Si vous ne recevez pas d'e-mail merci de vérifier votre dossier de spam ou </target>
+      </trans-unit>
+      <trans-unit id="W13t7jL" resname="try again">
+        <source>try again</source>
+        <target>Envoyer de nouveau</target>
+      </trans-unit>
+      <trans-unit id="M00Bb3V" resname="Hello!">
+        <source>Hello!</source>
+        <target>Bonjour!</target>
+      </trans-unit>
+      <trans-unit id="vQH5j0c" resname="To reset your password, please visit the following link">
+        <source>To reset your password, please visit the following link</source>
+        <target>Merci d'utiliser le lien ci-après pour modifier le mot de passe</target>
+      </trans-unit>
+      <trans-unit id="F7WctIl" resname="Cheers!">
+        <source>Cheers!</source>
+        <target>Cordialement!</target>
+      </trans-unit>
+      <trans-unit id="WfpDeb4" resname="Reset your password">
+        <source>Reset your password</source>
+        <target>Modifier votre mot de passe</target>
+      </trans-unit>
+      <trans-unit id="TZMpVdk" resname="Enter your email address and we will send you a&#10;&#9;&#9;&#9;                link to reset your password.">
+        <source>Enter your email address and we will send you a
+			                link to reset your password.</source>
+        <target>Entrer votre adresse e-mail et nous vous enverrons un lien de réinitialisation du mot de passe.</target>
+      </trans-unit>
+      <trans-unit id="y2XxXvP" resname="Send password reset email">
+        <source>Send password reset email</source>
+        <target>Réininitialiser le mot de passe</target>
+      </trans-unit>
+      <trans-unit id="4O3_s6c" resname="Reset password">
+        <source>Reset password</source>
+        <target>Réinitialiser le mot de passe</target>
+      </trans-unit>
+      <trans-unit id="wYmEDPf" resname="Log in">
+        <source>Log in</source>
+        <target>S'identifier</target>
+      </trans-unit>
+      <trans-unit id="acVpEs4" resname="You are logged in as">
+        <source>You are logged in as</source>
+        <target>Vous êtes conneté en tant que </target>
+      </trans-unit>
+      <trans-unit id="0FJ_Sz1" resname="Logout">
+        <source>Logout</source>
+        <target>Quitter</target>
+      </trans-unit>
+      <trans-unit id="dDUw20Q" resname="Please sign in">
+        <source>Please sign in</source>
+        <target>S'enregistrer</target>
+      </trans-unit>
+      <trans-unit id="2M9Jh03" resname="Email adress">
+        <source>Email adress</source>
+        <target>Adresse e-mail</target>
+      </trans-unit>
+      <trans-unit id="588_9PF" resname="Password">
+        <source>Password</source>
+        <target>Mot de passe</target>
+      </trans-unit>
+      <trans-unit id="v9QCsvb" resname="Sign in">
+        <source>Sign in</source>
+        <target>S'enregistrer</target>
+      </trans-unit>
+      <trans-unit id="VbXFH4Z" resname="lastname">
+        <source>lastname</source>
+        <target>Nom</target>
+      </trans-unit>
+      <trans-unit id="TP3eab3" resname="firstname">
+        <source>firstname</source>
+        <target>Prénom</target>
+      </trans-unit>
+      <trans-unit id=".fQY8iP" resname="adress">
+        <source>adress</source>
+        <target>adresse</target>
+      </trans-unit>
+      <trans-unit id="EaYsI0E" resname="city">
+        <source>city</source>
+        <target>ville</target>
+      </trans-unit>
+      <trans-unit id="rD4oQRR" resname="postcode">
+        <source>postcode</source>
+        <target>code postal</target>
+      </trans-unit>
+      <trans-unit id="RVadpX9" resname="phone">
+        <source>phone</source>
+        <target>Téléphone</target>
+      </trans-unit>
+      <trans-unit id="PN..9Ga" resname="Adress">
+        <source>Adress</source>
+        <target>Adresse</target>
+      </trans-unit>
+      <trans-unit id="F4229UI" resname="postalcode">
+        <source>postalcode</source>
+        <target>Code postal</target>
+      </trans-unit>
+      <trans-unit id="c1prjRW" resname="Agree terms">
+        <source>Agree terms</source>
+        <target>Accepter les termes</target>
+      </trans-unit>
+      <trans-unit id="IaE5GBl" resname="You should agree to our terms.">
+        <source>You should agree to our terms.</source>
+        <target>Vous devez accepter les termes.</target>
+      </trans-unit>
+      <trans-unit id="YXZ26gK" resname="Please enter a password">
+        <source>Please enter a password</source>
+        <target>Entrer un mot de passe</target>
+      </trans-unit>
+      <trans-unit id=".esazsm" resname="Your password should be at least {{ limit }} characters">
+        <source>Your password should be at least {{ limit }} characters</source>
+        <target>Votre mot de passe doit comporter au moins {{ limit }} caractères.</target>
+      </trans-unit>
+      <trans-unit id="P4D4xd8" resname="At least eight characters, at least one uppercase letter, one lowercase letter, one number and one special character">
+        <source>At least eight characters, at least one uppercase letter, one lowercase letter, one number and one special character</source>
+        <target>Huit caractères au moins, au moins une lettre majuscule, une lettre minuscule, un chiffre et un caractère spécial</target>
+      </trans-unit>
+      <trans-unit id="n8e66Za" resname="The format of your email is incorrect">
+        <source>The format of your email is incorrect</source>
+        <target>Le format de votre email est incorrect</target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

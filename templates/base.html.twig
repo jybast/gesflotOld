@@ -6,8 +6,11 @@
 	<body>
 		<div class="container">
 			<header>
-				{% block nav %}{% endblock %}
 
+				{% block nav %}
+					{% include "./modules/_nav.html.twig" %}
+				{% endblock %}
+				{% block head %}{% endblock %}
 			</header>
 			<section>
 				{% block body %}{% endblock %}
