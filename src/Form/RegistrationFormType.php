@@ -38,6 +38,30 @@ class RegistrationFormType extends AbstractType
                     ])
                 ]
             ])
+            ->add('plainPassword', PasswordType::class, [
+                // instead of being set onto the object directly,
+                // this is read and encoded in the controller
+                'mapped' => false,
+                'attr' => ['autocomplete' => 'new-password'],
+                'constraints' => [
+                    new NotBlank([
+                        'message' => $this->translator->trans('Please enter a password'),
+                    ]),
+                    /*
+                    new Length([
+                        'min' => 6,
+                        'minMessage' => "Your password should be at least {{ limit }} characters",
+                        // max length allowed by Symfony for security reasons
+                        'max' => 4096,
+                    ]),
+                    */
+                    new Regex([
+                        'pattern' => '#^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$#',
+                        'message' => $this->translator->trans('At least eight characters, at least one uppercase letter, one lowercase letter, one number and one special character')
+
+                    ])
+                ],
+            ])
             ->add('lastname', TextType::class, [
                 'label' => $this->translator->trans('lastname'),
                 'required' => false
@@ -69,30 +93,6 @@ class RegistrationFormType extends AbstractType
                     new IsTrue([
                         'message' => $this->translator->trans('You should agree to our terms.'),
                     ]),
-                ],
-            ])
-            ->add('plainPassword', PasswordType::class, [
-                // instead of being set onto the object directly,
-                // this is read and encoded in the controller
-                'mapped' => false,
-                'attr' => ['autocomplete' => 'new-password'],
-                'constraints' => [
-                    new NotBlank([
-                        'message' => $this->translator->trans('Please enter a password'),
-                    ]),
-                    /*
-                    new Length([
-                        'min' => 6,
-                        'minMessage' => "Your password should be at least {{ limit }} characters",
-                        // max length allowed by Symfony for security reasons
-                        'max' => 4096,
-                    ]),
-                    */
-                    new Regex([
-                        'pattern' => '#^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$#',
-                        'message' => $this->translator->trans('At least eight characters, at least one uppercase letter, one lowercase letter, one number and one special character')
-
-                    ])
                 ],
             ]);
     }

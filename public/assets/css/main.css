@@ -1,0 +1,24 @@
+@font-face {
+  font-family: "Font Awesome";
+  font-style: normal;
+  font-weight: 400;
+  src: url(../css/fontawesome-webfont.woff);
+}
+
+/* 
+ * css selector for a class attribute that starts with "fa-" or has " fa-" in it:
+ */
+[class^="fa-"]:before,
+[class*="fa-"]:before {
+  font-family: "FontAwesome";
+  font-weight: bold;
+  margin: 0 6px 0 2px;
+}
+
+/*
+  * And then only 1 setting per font awesome class
+  */
+.fa-enveloppe:before {
+  content: "\f193";
+}
+/*# sourceMappingURL=main.css.map */

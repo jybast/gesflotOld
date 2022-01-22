@@ -10,14 +10,16 @@
 				{% block nav %}
 					{% include "./modules/_nav.html.twig" %}
 				{% endblock %}
-				{% block head %}{% endblock %}
+				{% block header %}{% endblock %}
 			</header>
 			<section>
 				{% block body %}{% endblock %}
 			</section>
 
 			<footer>
-				{% block foot %}{% endblock %}
+				{% block foot %}
+					{% include "./modules/_foot.html.twig" %}
+				{% endblock %}
 			</footer>
 		</div>
 		<!-- Fin de page-conteneur -->

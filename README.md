@@ -22,7 +22,14 @@ Javascript
 *Créer un Controller de pages statiques
 *Créer l'entité User
 *Préparer le système d'authentification et d'enregistrement
-Préparer mise en place traduction multilingue
+*Préparer mise en place traduction multilingue
+L'entité Vehicule comporte:
+- Les renseignements du certificat d'immatriculation
+- Les renseignements techniques spécifiques
+- les renseignements financiers
+- lien sur les images du véhicule
+- lien sur les documents du véhicule
+Un controller (Add, delete, edit, show) et upload de fichiers.
 
 
 

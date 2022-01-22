@@ -12,9 +12,16 @@
 	<h1>{% trans %}Register{% endtrans %}</h1>
 
 	{{ form_start(registrationForm) }}
-	{{ form_row(registrationForm.email) }}
+
+	{{ form_row(registrationForm.email,{
+		label: 'Email',
+		label_attr : { 'class' : 'bi bi-envelope'}
+	})}}
+
+
 	{{ form_row(registrationForm.plainPassword, {
-            label: 'Password'
+            label: 'Password',
+			label_attr: { 'class' : 'bi-key-fill'}
         }) }}
 	{{ form_row(registrationForm.lastname) }}
 	{{ form_row(registrationForm.firstname) }}
