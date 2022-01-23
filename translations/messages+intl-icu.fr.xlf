@@ -170,6 +170,286 @@
         <source>The format of your email is incorrect</source>
         <target>Le format de votre email est incorrect</target>
       </trans-unit>
+      <trans-unit id="PdnfREH" resname="New password">
+        <source>New password</source>
+        <target>Nouveau mot de passe</target>
+      </trans-unit>
+      <trans-unit id="Hkmh4Tp" resname="Repeat Password">
+        <source>Repeat Password</source>
+        <target>Entrer à nouveau le mot de passe</target>
+      </trans-unit>
+      <trans-unit id="TdLhlyP" resname="The password fields must match.">
+        <source>The password fields must match.</source>
+        <target>Les deux valeurs de mot de passe doivent correspondre</target>
+      </trans-unit>
+      <trans-unit id="Fe2zEyl" resname="Please enter your email">
+        <source>Please enter your email</source>
+        <target>Entrer votre adresse e-mail</target>
+      </trans-unit>
+      <trans-unit id="86FwjJK" resname="Edit Vehicule">
+        <source>Edit Vehicule</source>
+        <target>Modifier un véhicule</target>
+      </trans-unit>
+      <trans-unit id="U0M9PNE" resname="back to list">
+        <source>back to list</source>
+        <target>Retour à la liste</target>
+      </trans-unit>
+      <trans-unit id="Ah5L4RF" resname="Vehicule index">
+        <source>Vehicule index</source>
+        <target>Liste de véhicules</target>
+      </trans-unit>
+      <trans-unit id="HGMzUJ3" resname="show">
+        <source>show</source>
+        <target>Voir</target>
+      </trans-unit>
+      <trans-unit id="JiEhxTc" resname="edit">
+        <source>edit</source>
+        <target>Editer</target>
+      </trans-unit>
+      <trans-unit id="D5lam8." resname="no records found">
+        <source>no records found</source>
+        <target>Aucun enregistrement trouvé.</target>
+      </trans-unit>
+      <trans-unit id="TWEg7nw" resname="New Vehicule">
+        <source>New Vehicule</source>
+        <target>Nouveau véhicule</target>
+      </trans-unit>
+      <trans-unit id="gle72LK" resname="Create new Vehicule">
+        <source>Create new Vehicule</source>
+        <target>Ajouter un véhicule</target>
+      </trans-unit>
+      <trans-unit id="KYYlqoz" resname="'Are you sure you want to delete this item?'">
+        <source>'Are you sure you want to delete this item?'</source>
+        <target>Etes-vous sûr de vouloir supprimer cet item?'</target>
+      </trans-unit>
+      <trans-unit id="4tClSWj" resname="Delete">
+        <source>Delete</source>
+        <target>Supprimer</target>
+      </trans-unit>
+      <trans-unit id="nz33U6Q" resname="Create new">
+        <source>Create new</source>
+        <target>Créer un nouveau</target>
+      </trans-unit>
+      <trans-unit id=".w5hJ7m" resname="plate number">
+        <source>plate number</source>
+        <target>Numéro d'immatriculation</target>
+      </trans-unit>
+      <trans-unit id="cK3sE01" resname="Date of 1st use">
+        <source>Date of 1st use</source>
+        <target>Date 1ère mise en circulation</target>
+      </trans-unit>
+      <trans-unit id="zrQwgJD" resname="Owner's full name">
+        <source>Owner's full name</source>
+        <target>Identité du propriétaire</target>
+      </trans-unit>
+      <trans-unit id="ipyVOys" resname="Is the owner">
+        <source>Is the owner</source>
+        <target>Est propriétaire</target>
+      </trans-unit>
+      <trans-unit id="YFAjsUg" resname="Co-owner's full name">
+        <source>Co-owner's full name</source>
+        <target>Co-propriétaire</target>
+      </trans-unit>
+      <trans-unit id="CQ7UMW8" resname="Brand">
+        <source>Brand</source>
+        <target>Marque</target>
+      </trans-unit>
+      <trans-unit id="3RZ5Bd4" resname="Version">
+        <source>Version</source>
+        <target>Type, Variante</target>
+      </trans-unit>
+      <trans-unit id="AyIvkY2" resname="National type identification">
+        <source>National type identification</source>
+        <target>Code National d’Identification</target>
+      </trans-unit>
+      <trans-unit id="6onoEZE" resname="Brand trade name">
+        <source>Brand trade name</source>
+        <target>Nom commercial</target>
+      </trans-unit>
+      <trans-unit id="rTt2TuD" resname="National identification number">
+        <source>National identification number</source>
+        <target>Numéro d'identification VIN</target>
+      </trans-unit>
+      <trans-unit id="I.Er0Kr" resname="Technically permissible maximum laden mass">
+        <source>Technically permissible maximum laden mass</source>
+        <target>P.T.A.C</target>
+      </trans-unit>
+      <trans-unit id="myURqKS" resname="Authorized total laden mass">
+        <source>Authorized total laden mass</source>
+        <target>Masse en charge maximale admissible</target>
+      </trans-unit>
+      <trans-unit id="NXKkk_Q" resname="Gross vehicle weight allowed">
+        <source>Gross vehicle weight allowed</source>
+        <target>P.T.R.A</target>
+      </trans-unit>
+      <trans-unit id="2P0p2rm" resname="Operating weight">
+        <source>Operating weight</source>
+        <target>Masse du véhicule en service</target>
+      </trans-unit>
+      <trans-unit id="bRpRLEm" resname="Unloaded weight">
+        <source>Unloaded weight</source>
+        <target>Poids à vide</target>
+      </trans-unit>
+      <trans-unit id="p__rHll" resname="Date of establishment">
+        <source>Date of establishment</source>
+        <target>Date d’établissement de la CG</target>
+      </trans-unit>
+      <trans-unit id="5kY7._D" resname="Vehicle category">
+        <source>Vehicle category</source>
+        <target>catégorie</target>
+      </trans-unit>
+      <trans-unit id="B2yo80H" resname="National style">
+        <source>National style</source>
+        <target>genre (nat)</target>
+      </trans-unit>
+      <trans-unit id="G_R85tN" resname="Bodywork (CE)">
+        <source>Bodywork (CE)</source>
+        <target>Carrosserie (CE)</target>
+      </trans-unit>
+      <trans-unit id="gmhS3IP" resname="Bodywork (Nat)">
+        <source>Bodywork (Nat)</source>
+        <target>Carrosserie (Nat)</target>
+      </trans-unit>
+      <trans-unit id="u0wZ9vF" resname="Type-approval number">
+        <source>Type-approval number</source>
+        <target>Numéro de réception </target>
+      </trans-unit>
+      <trans-unit id="3NLSTkr" resname="displacement">
+        <source>displacement</source>
+        <target>cylindrée</target>
+      </trans-unit>
+      <trans-unit id="VwJAzqX" resname="Maximum Net Power">
+        <source>Maximum Net Power</source>
+        <target>Puissance</target>
+      </trans-unit>
+      <trans-unit id="uZZraWK" resname="Fuel type">
+        <source>Fuel type</source>
+        <target>Type de carburant</target>
+      </trans-unit>
+      <trans-unit id="4W8hivK" resname="National administrative power">
+        <source>National administrative power</source>
+        <target>puissance administrative</target>
+      </trans-unit>
+      <trans-unit id="7VevV.4" resname="Power/mass ratio in kW/kg">
+        <source>Power/mass ratio in kW/kg</source>
+        <target>rapport masse/puissance en kW/kg</target>
+      </trans-unit>
+      <trans-unit id="jXMvuHB" resname="Seating places">
+        <source>Seating places</source>
+        <target>places assises</target>
+      </trans-unit>
+      <trans-unit id=".blFG20" resname="standing room">
+        <source>standing room</source>
+        <target>places debout</target>
+      </trans-unit>
+      <trans-unit id="A.IolVd" resname="Sound level">
+        <source>Sound level</source>
+        <target>niveau sonore</target>
+      </trans-unit>
+      <trans-unit id="sMwxaJ9" resname="Motor speed">
+        <source>Motor speed</source>
+        <target>Vitesse moteur</target>
+      </trans-unit>
+      <trans-unit id="ugWleM4" resname="CO2 release">
+        <source>CO2 release</source>
+        <target>rejet CO2</target>
+      </trans-unit>
+      <trans-unit id="R7LyAfv" resname="environmental class">
+        <source>environmental class</source>
+        <target>classe environnementale</target>
+      </trans-unit>
+      <trans-unit id="J_upuVV" resname="Due date of the Technical Inspection">
+        <source>Due date of the Technical Inspection</source>
+        <target>Date d’échéance du Contrôle Technique</target>
+      </trans-unit>
+      <trans-unit id="_k9cH31" resname="regional tax">
+        <source>regional tax</source>
+        <target>taxe régionale</target>
+      </trans-unit>
+      <trans-unit id="km3al.e" resname="Professional tax">
+        <source>Professional tax</source>
+        <target>taxe professionnelle</target>
+      </trans-unit>
+      <trans-unit id="VyJbSd1" resname="additional CO2 tax">
+        <source>additional CO2 tax</source>
+        <target>taxe additionnelle CO2</target>
+      </trans-unit>
+      <trans-unit id="ix3l9KP" resname="fixed fee for certificate management">
+        <source>fixed fee for certificate management</source>
+        <target>taxe fixe pour gestion du certificat</target>
+      </trans-unit>
+      <trans-unit id="GMSRA_N" resname="delivery charge">
+        <source>delivery charge</source>
+        <target>redevance pour acheminement</target>
+      </trans-unit>
+      <trans-unit id="H2d70wm" resname="Total tax amount">
+        <source>Total tax amount</source>
+        <target>montant total</target>
+      </trans-unit>
+      <trans-unit id="rclWBaG" resname="Length">
+        <source>Length</source>
+        <target>longueur</target>
+      </trans-unit>
+      <trans-unit id="MBmUe22" resname="Width">
+        <source>Width</source>
+        <target>largeur</target>
+      </trans-unit>
+      <trans-unit id="v_LspAF" resname="Height">
+        <source>Height</source>
+        <target>hauteur</target>
+      </trans-unit>
+      <trans-unit id="Cvl3KI2" resname="trunk volume">
+        <source>trunk volume</source>
+        <target>volume du coffre</target>
+      </trans-unit>
+      <trans-unit id="6OS66ag" resname="wheelbase">
+        <source>wheelbase</source>
+        <target>empattement</target>
+      </trans-unit>
+      <trans-unit id="e9bb5o2" resname="rear overhang">
+        <source>rear overhang</source>
+        <target>porte à faux</target>
+      </trans-unit>
+      <trans-unit id="mK14JzL" resname="tank capacity">
+        <source>tank capacity</source>
+        <target>Capacité du réservoir</target>
+      </trans-unit>
+      <trans-unit id="tDwav2B" resname="max fuel consumption">
+        <source>max fuel consumption</source>
+        <target>consommation urbaine</target>
+      </trans-unit>
+      <trans-unit id="GTL7eCn" resname="average fuel consumption">
+        <source>average fuel consumption</source>
+        <target>Consommation moyenne</target>
+      </trans-unit>
+      <trans-unit id="l3McL6v" resname="mode of propulsion">
+        <source>mode of propulsion</source>
+        <target>transmission</target>
+      </trans-unit>
+      <trans-unit id="IEkW4La" resname="gear box">
+        <source>gear box</source>
+        <target>boîte de vitesse</target>
+      </trans-unit>
+      <trans-unit id="BK3lHxL" resname="tires">
+        <source>tires</source>
+        <target>pneumatiques</target>
+      </trans-unit>
+      <trans-unit id="3rRW_Kl" resname="date of purchase">
+        <source>date of purchase</source>
+        <target>date d'achat</target>
+      </trans-unit>
+      <trans-unit id="23p3abn" resname="purchase value">
+        <source>purchase value</source>
+        <target>valeur d'achat</target>
+      </trans-unit>
+      <trans-unit id="MpGS1Ea" resname="Documents to download">
+        <source>Documents to download</source>
+        <target>Documents à télécharger</target>
+      </trans-unit>
+      <trans-unit id="w_Bmdxv" resname="Please use a valid PDF file.">
+        <source>Please use a valid PDF file.</source>
+        <target>Veuillez utiliseer un fichier PDF valide.</target>
+      </trans-unit>
     </body>
   </file>
 </xliff>

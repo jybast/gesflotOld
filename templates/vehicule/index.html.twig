@@ -1,0 +1,148 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+	{% trans %}Vehicule index{% endtrans %}
+{% endblock %}
+
+{% block body %}
+	<h1>{% trans %}Vehicule index{% endtrans %}</h1>
+
+	<table class="table">
+		<thead>
+			<tr>
+				<th>Id</th>
+				<th>Immatriculation</th>
+				<th>CirculationAt</th>
+				<th>C1_titulaire</th>
+				<th>C4_proprietaire</th>
+				<th>C4_cotitulaire</th>
+				<th>C3_adresse</th>
+				<th>D1_marque</th>
+				<th>D2_version</th>
+				<th>D21_cnit</th>
+				<th>D3_commercial</th>
+				<th>E_identification</th>
+				<th>F1_ptac</th>
+				<th>F2_masse</th>
+				<th>F3_ptra</th>
+				<th>G_poidsmarche</th>
+				<th>G1_poidsvide</th>
+				<th>I_certificatAt</th>
+				<th>J_categorie</th>
+				<th>J1_genre</th>
+				<th>J2_carrosserie</th>
+				<th>J3_nat</th>
+				<th>K_reception</th>
+				<th>P1_cylindree</th>
+				<th>P2_puissance</th>
+				<th>P3_energie</th>
+				<th>P6_fiscal</th>
+				<th>Q_kwkg</th>
+				<th>S1_assis</th>
+				<th>S2_debout</th>
+				<th>U1_sonore</th>
+				<th>U2_moteur</th>
+				<th>V7_co2</th>
+				<th>V9_classe</th>
+				<th>X1_visiteAt</th>
+				<th>Y1_region</th>
+				<th>Y2_formation</th>
+				<th>Y3_ecotaxe</th>
+				<th>Y4_gestion</th>
+				<th>Y5_redevance</th>
+				<th>Y6_total</th>
+				<th>Longueur</th>
+				<th>Largeur</th>
+				<th>Hauteur</th>
+				<th>Coffre</th>
+				<th>Empattement</th>
+				<th>Porteafaux</th>
+				<th>Reservoir</th>
+				<th>Conso_urbaine</th>
+				<th>Conso_mixte</th>
+				<th>Transmission</th>
+				<th>Boite</th>
+				<th>Pneumatiques</th>
+				<th>AcheterAt</th>
+				<th>Valeur_achat</th>
+				<th>actions</th>
+			</tr>
+		</thead>
+		<tbody>
+			{% for vehicule in vehicules %}
+				<tr>
+					<td>{{ vehicule.id }}</td>
+					<td>{{ vehicule.immatriculation }}</td>
+					<td>{{ vehicule.circulationAt ? vehicule.circulationAt|date('d/m/Y') : '' }}</td>
+					<td>{{ vehicule.c1Titulaire }}</td>
+					<td>{{ vehicule.c4Proprietaire ? 'Yes' : 'No' }}</td>
+					<td>{{ vehicule.c4Cotitulaire }}</td>
+					<td>{{ vehicule.c3Adresse }}</td>
+					<td>{{ vehicule.d1Marque }}</td>
+					<td>{{ vehicule.d2Version }}</td>
+					<td>{{ vehicule.d21Cnit }}</td>
+					<td>{{ vehicule.d3Commercial }}</td>
+					<td>{{ vehicule.eIdentification }}</td>
+					<td>{{ vehicule.f1Ptac }}</td>
+					<td>{{ vehicule.f2Masse }}</td>
+					<td>{{ vehicule.f3Ptra }}</td>
+					<td>{{ vehicule.gPoidsmarche }}</td>
+					<td>{{ vehicule.g1Poidsvide }}</td>
+					<td>{{ vehicule.iCertificatAt ? vehicule.iCertificatAt|date('d/m/Y') : '' }}</td>
+					<td>{{ vehicule.jCategorie }}</td>
+					<td>{{ vehicule.j1Genre }}</td>
+					<td>{{ vehicule.j2Carrosserie }}</td>
+					<td>{{ vehicule.j3Nat }}</td>
+					<td>{{ vehicule.kReception }}</td>
+					<td>{{ vehicule.p1Cylindree }}</td>
+					<td>{{ vehicule.p2Puissance }}</td>
+					<td>{{ vehicule.p3Energie }}</td>
+					<td>{{ vehicule.p6Fiscal }}</td>
+					<td>{{ vehicule.qKwkg }}</td>
+					<td>{{ vehicule.s1Assis }}</td>
+					<td>{{ vehicule.s2Debout }}</td>
+					<td>{{ vehicule.u1Sonore }}</td>
+					<td>{{ vehicule.u2Moteur }}</td>
+					<td>{{ vehicule.v7Co2 }}</td>
+					<td>{{ vehicule.v9Classe }}</td>
+					<td>{{ vehicule.x1VisiteAt ? vehicule.x1VisiteAt|date('d/m/Y') : '' }}</td>
+					<td>{{ vehicule.y1Region }}</td>
+					<td>{{ vehicule.y2Formation }}</td>
+					<td>{{ vehicule.y3Ecotaxe }}</td>
+					<td>{{ vehicule.y4Gestion }}</td>
+					<td>{{ vehicule.y5Redevance }}</td>
+					<td>{{ vehicule.y6Total }}</td>
+					<td>{{ vehicule.longueur }}</td>
+					<td>{{ vehicule.largeur }}</td>
+					<td>{{ vehicule.hauteur }}</td>
+					<td>{{ vehicule.coffre }}</td>
+					<td>{{ vehicule.empattement }}</td>
+					<td>{{ vehicule.porteafaux }}</td>
+					<td>{{ vehicule.reservoir }}</td>
+					<td>{{ vehicule.consoUrbaine }}</td>
+					<td>{{ vehicule.consoMixte }}</td>
+					<td>{{ vehicule.transmission }}</td>
+					<td>{{ vehicule.boite }}</td>
+					<td>{{ vehicule.pneumatiques }}</td>
+					<td>{{ vehicule.acheterAt ? vehicule.acheterAt|date('d/m/Y') : '' }}</td>
+					<td>{{ vehicule.valeurAchat }}</td>
+					<td>
+						<a href="{{ path('vehicule_show', {'id': vehicule.id}) }}">{% trans %}show
+							{% endtrans %}</a>
+						<a href="{{ path('vehicule_edit', {'id': vehicule.id}) }}">{% trans %}
+							edit
+							{% endtrans %}</a>
+					</td>
+				</tr>
+			{% else %}
+				<tr>
+					<td colspan="56">{% trans %}
+						no records found
+						{% endtrans %}</td>
+				</tr>
+			{% endfor %}
+		</tbody>
+	</table>
+
+	<a href="{{ path('vehicule_new') }}">{% trans %}Create new{% endtrans %}</a>
+{% endblock %}

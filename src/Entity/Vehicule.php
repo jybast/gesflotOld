@@ -3,6 +3,8 @@
 namespace App\Entity;
 
 use App\Repository\VehiculeRepository;
+use Doctrine\Common\Collections\ArrayCollection;
+use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
 
 #[ORM\Entity(repositoryClass: VehiculeRepository::class)]
@@ -174,6 +176,22 @@ class Vehicule
 
     #[ORM\Column(type: 'decimal', precision: 10, scale: 2, nullable: true)]
     private $valeur_achat;
+
+    #[ORM\OneToMany(mappedBy: 'vehicule', targetEntity: Image::class, orphanRemoval: true)]
+    private $images;
+
+    #[ORM\OneToMany(mappedBy: 'vehicule', targetEntity: Document::class, orphanRemoval: true)]
+    private $documents;
+
+    #[ORM\OneToMany(mappedBy: 'vehicule', targetEntity: Assurance::class)]
+    private $assurances;
+
+    public function __construct()
+    {
+        $this->images = new ArrayCollection();
+        $this->documents = new ArrayCollection();
+        $this->assurances = new ArrayCollection();
+    }
 
     public function getId(): ?int
     {
@@ -824,6 +842,96 @@ class Vehicule
     public function setValeurAchat(?string $valeur_achat): self
     {
         $this->valeur_achat = $valeur_achat;
+
+        return $this;
+    }
+
+    /**
+     * @return Collection|Image[]
+     */
+    public function getImages(): Collection
+    {
+        return $this->images;
+    }
+
+    public function addImage(Image $image): self
+    {
+        if (!$this->images->contains($image)) {
+            $this->images[] = $image;
+            $image->setVehicule($this);
+        }
+
+        return $this;
+    }
+
+    public function removeImage(Image $image): self
+    {
+        if ($this->images->removeElement($image)) {
+            // set the owning side to null (unless already changed)
+            if ($image->getVehicule() === $this) {
+                $image->setVehicule(null);
+            }
+        }
+
+        return $this;
+    }
+
+    /**
+     * @return Collection|Document[]
+     */
+    public function getDocuments(): Collection
+    {
+        return $this->documents;
+    }
+
+    public function addDocument(Document $document): self
+    {
+        if (!$this->documents->contains($document)) {
+            $this->documents[] = $document;
+            $document->setVehicule($this);
+        }
+
+        return $this;
+    }
+
+    public function removeDocument(Document $document): self
+    {
+        if ($this->documents->removeElement($document)) {
+            // set the owning side to null (unless already changed)
+            if ($document->getVehicule() === $this) {
+                $document->setVehicule(null);
+            }
+        }
+
+        return $this;
+    }
+
+    /**
+     * @return Collection|Assurance[]
+     */
+    public function getAssurances(): Collection
+    {
+        return $this->assurances;
+    }
+
+    public function addAssurance(Assurance $assurance): self
+    {
+        if (!$this->assurances->contains($assurance)) {
+            $this->assurances[] = $assurance;
+            $assurance->setVehicule($this);
+        }
+
+        return $this;
+    }
+
+    public function removeAssurance(Assurance $assurance): self
+    {
+        if ($this->assurances->removeElement($assurance)) {
+            // set the owning side to null (unless already changed)
+            if ($assurance->getVehicule() === $this) {
+                $assurance->setVehicule(null);
+            }
+        }
 
         return $this;
     }

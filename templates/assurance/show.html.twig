@@ -1,0 +1,46 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Assurance{% endblock %}
+
+{% block body %}
+    <h1>Assurance</h1>
+
+    <table class="table">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ assurance.id }}</td>
+            </tr>
+            <tr>
+                <th>Compagnie</th>
+                <td>{{ assurance.compagnie }}</td>
+            </tr>
+            <tr>
+                <th>Adresse</th>
+                <td>{{ assurance.adresse }}</td>
+            </tr>
+            <tr>
+                <th>Mail</th>
+                <td>{{ assurance.mail }}</td>
+            </tr>
+            <tr>
+                <th>ValideAt</th>
+                <td>{{ assurance.valideAt ? assurance.valideAt|date('Y-m-d') : '' }}</td>
+            </tr>
+            <tr>
+                <th>ExpireAt</th>
+                <td>{{ assurance.expireAt ? assurance.expireAt|date('Y-m-d') : '' }}</td>
+            </tr>
+            <tr>
+                <th>Montant</th>
+                <td>{{ assurance.montant }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <a href="{{ path('assurance_index') }}">back to list</a>
+
+    <a href="{{ path('assurance_edit', {'id': assurance.id}) }}">edit</a>
+
+    {{ include('assurance/_delete_form.html.twig') }}
+{% endblock %}

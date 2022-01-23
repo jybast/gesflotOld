@@ -1,0 +1,240 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+	{% trans %}Vehicule{% trans %}
+{% endblock %}
+
+{% block body %}
+	<h1>{% trans %}Vehicule{% trans %}</h1>
+
+	<table class="table">
+		<tbody>
+			<tr>
+				<th>Id</th>
+				<td>{{ vehicule.id }}</td>
+			</tr>
+			<tr>
+				<th>Immatriculation</th>
+				<td>{{ vehicule.immatriculation }}</td>
+			</tr>
+			<tr>
+				<th>CirculationAt</th>
+				<td>{{ vehicule.circulationAt ? vehicule.circulationAt|date('d/m/Y') : '' }}</td>
+			</tr>
+			<tr>
+				<th>C1_titulaire</th>
+				<td>{{ vehicule.c1Titulaire }}</td>
+			</tr>
+			<tr>
+				<th>C4_proprietaire</th>
+				<td>{{ vehicule.c4Proprietaire ? 'Yes' : 'No' }}</td>
+			</tr>
+			<tr>
+				<th>C4_cotitulaire</th>
+				<td>{{ vehicule.c4Cotitulaire }}</td>
+			</tr>
+			<tr>
+				<th>C3_adresse</th>
+				<td>{{ vehicule.c3Adresse }}</td>
+			</tr>
+			<tr>
+				<th>D1_marque</th>
+				<td>{{ vehicule.d1Marque }}</td>
+			</tr>
+			<tr>
+				<th>D2_version</th>
+				<td>{{ vehicule.d2Version }}</td>
+			</tr>
+			<tr>
+				<th>D21_cnit</th>
+				<td>{{ vehicule.d21Cnit }}</td>
+			</tr>
+			<tr>
+				<th>D3_commercial</th>
+				<td>{{ vehicule.d3Commercial }}</td>
+			</tr>
+			<tr>
+				<th>E_identification</th>
+				<td>{{ vehicule.eIdentification }}</td>
+			</tr>
+			<tr>
+				<th>F1_ptac</th>
+				<td>{{ vehicule.f1Ptac }}</td>
+			</tr>
+			<tr>
+				<th>F2_masse</th>
+				<td>{{ vehicule.f2Masse }}</td>
+			</tr>
+			<tr>
+				<th>F3_ptra</th>
+				<td>{{ vehicule.f3Ptra }}</td>
+			</tr>
+			<tr>
+				<th>G_poidsmarche</th>
+				<td>{{ vehicule.gPoidsmarche }}</td>
+			</tr>
+			<tr>
+				<th>G1_poidsvide</th>
+				<td>{{ vehicule.g1Poidsvide }}</td>
+			</tr>
+			<tr>
+				<th>I_certificatAt</th>
+				<td>{{ vehicule.iCertificatAt ? vehicule.iCertificatAt|date('d/m/Y') : '' }}</td>
+			</tr>
+			<tr>
+				<th>J_categorie</th>
+				<td>{{ vehicule.jCategorie }}</td>
+			</tr>
+			<tr>
+				<th>J1_genre</th>
+				<td>{{ vehicule.j1Genre }}</td>
+			</tr>
+			<tr>
+				<th>J2_carrosserie</th>
+				<td>{{ vehicule.j2Carrosserie }}</td>
+			</tr>
+			<tr>
+				<th>J3_nat</th>
+				<td>{{ vehicule.j3Nat }}</td>
+			</tr>
+			<tr>
+				<th>K_reception</th>
+				<td>{{ vehicule.kReception }}</td>
+			</tr>
+			<tr>
+				<th>P1_cylindree</th>
+				<td>{{ vehicule.p1Cylindree }}</td>
+			</tr>
+			<tr>
+				<th>P2_puissance</th>
+				<td>{{ vehicule.p2Puissance }}</td>
+			</tr>
+			<tr>
+				<th>P3_energie</th>
+				<td>{{ vehicule.p3Energie }}</td>
+			</tr>
+			<tr>
+				<th>P6_fiscal</th>
+				<td>{{ vehicule.p6Fiscal }}</td>
+			</tr>
+			<tr>
+				<th>Q_kwkg</th>
+				<td>{{ vehicule.qKwkg }}</td>
+			</tr>
+			<tr>
+				<th>S1_assis</th>
+				<td>{{ vehicule.s1Assis }}</td>
+			</tr>
+			<tr>
+				<th>S2_debout</th>
+				<td>{{ vehicule.s2Debout }}</td>
+			</tr>
+			<tr>
+				<th>U1_sonore</th>
+				<td>{{ vehicule.u1Sonore }}</td>
+			</tr>
+			<tr>
+				<th>U2_moteur</th>
+				<td>{{ vehicule.u2Moteur }}</td>
+			</tr>
+			<tr>
+				<th>V7_co2</th>
+				<td>{{ vehicule.v7Co2 }}</td>
+			</tr>
+			<tr>
+				<th>V9_classe</th>
+				<td>{{ vehicule.v9Classe }}</td>
+			</tr>
+			<tr>
+				<th>X1_visiteAt</th>
+				<td>{{ vehicule.x1VisiteAt ? vehicule.x1VisiteAt|date('d/m/Y') : '' }}</td>
+			</tr>
+			<tr>
+				<th>Y1_region</th>
+				<td>{{ vehicule.y1Region }}</td>
+			</tr>
+			<tr>
+				<th>Y2_formation</th>
+				<td>{{ vehicule.y2Formation }}</td>
+			</tr>
+			<tr>
+				<th>Y3_ecotaxe</th>
+				<td>{{ vehicule.y3Ecotaxe }}</td>
+			</tr>
+			<tr>
+				<th>Y4_gestion</th>
+				<td>{{ vehicule.y4Gestion }}</td>
+			</tr>
+			<tr>
+				<th>Y5_redevance</th>
+				<td>{{ vehicule.y5Redevance }}</td>
+			</tr>
+			<tr>
+				<th>Y6_total</th>
+				<td>{{ vehicule.y6Total }}</td>
+			</tr>
+			<tr>
+				<th>Longueur</th>
+				<td>{{ vehicule.longueur }}</td>
+			</tr>
+			<tr>
+				<th>Largeur</th>
+				<td>{{ vehicule.largeur }}</td>
+			</tr>
+			<tr>
+				<th>Hauteur</th>
+				<td>{{ vehicule.hauteur }}</td>
+			</tr>
+			<tr>
+				<th>Coffre</th>
+				<td>{{ vehicule.coffre }}</td>
+			</tr>
+			<tr>
+				<th>Empattement</th>
+				<td>{{ vehicule.empattement }}</td>
+			</tr>
+			<tr>
+				<th>Porteafaux</th>
+				<td>{{ vehicule.porteafaux }}</td>
+			</tr>
+			<tr>
+				<th>Reservoir</th>
+				<td>{{ vehicule.reservoir }}</td>
+			</tr>
+			<tr>
+				<th>Conso_urbaine</th>
+				<td>{{ vehicule.consoUrbaine }}</td>
+			</tr>
+			<tr>
+				<th>Conso_mixte</th>
+				<td>{{ vehicule.consoMixte }}</td>
+			</tr>
+			<tr>
+				<th>Transmission</th>
+				<td>{{ vehicule.transmission }}</td>
+			</tr>
+			<tr>
+				<th>Boite</th>
+				<td>{{ vehicule.boite }}</td>
+			</tr>
+			<tr>
+				<th>Pneumatiques</th>
+				<td>{{ vehicule.pneumatiques }}</td>
+			</tr>
+			<tr>
+				<th>AcheterAt</th>
+				<td>{{ vehicule.acheterAt ? vehicule.acheterAt|date('d/m/Y') : '' }}</td>
+			</tr>
+			<tr>
+				<th>Valeur_achat</th>
+				<td>{{ vehicule.valeurAchat }}</td>
+			</tr>
+		</tbody>
+	</table>
+
+	<a href="{{ path('vehicule_index') }}">{% trans %}back to list{% endtrans %}</a>
+
+	<a href="{{ path('vehicule_edit', {'id': vehicule.id}) }}">{% trans %}edit{% endtrans %}</a>
+
+	{{ include('vehicule/_delete_form.html.twig') }}
+{% endblock %}
