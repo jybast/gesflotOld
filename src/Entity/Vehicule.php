@@ -177,13 +177,13 @@ class Vehicule
     #[ORM\Column(type: 'decimal', precision: 10, scale: 2, nullable: true)]
     private $valeur_achat;
 
-    #[ORM\OneToMany(mappedBy: 'vehicule', targetEntity: Image::class, orphanRemoval: true)]
+    #[ORM\OneToMany(mappedBy: 'vehicule', targetEntity: Image::class, orphanRemoval: true, cascade: ["persist"])]
     private $images;
 
-    #[ORM\OneToMany(mappedBy: 'vehicule', targetEntity: Document::class, orphanRemoval: true)]
+    #[ORM\OneToMany(mappedBy: 'vehicule', targetEntity: Document::class, orphanRemoval: true, cascade: ["persist"])]
     private $documents;
 
-    #[ORM\OneToMany(mappedBy: 'vehicule', targetEntity: Assurance::class)]
+    #[ORM\OneToMany(mappedBy: 'vehicule', targetEntity: Assurance::class, cascade: ["persist"])]
     private $assurances;
 
     public function __construct()
@@ -191,6 +191,11 @@ class Vehicule
         $this->images = new ArrayCollection();
         $this->documents = new ArrayCollection();
         $this->assurances = new ArrayCollection();
+    }
+
+    public function __toString()
+    {
+        return $this->immatriculation;
     }
 
     public function getId(): ?int

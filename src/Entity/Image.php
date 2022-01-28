@@ -20,6 +20,11 @@ class Image
     #[ORM\JoinColumn(nullable: false)]
     private $vehicule;
 
+    public function __toString()
+    {
+        return $this->nom;
+    }
+
     public function getId(): ?int
     {
         return $this->id;

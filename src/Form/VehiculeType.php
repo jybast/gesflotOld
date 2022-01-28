@@ -3,15 +3,19 @@
 namespace App\Form;
 
 use App\Entity\Vehicule;
-use Doctrine\DBAL\Types\BooleanType;
+
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
+use Symfony\Component\Validator\Constraints\All;
 use Symfony\Component\Validator\Constraints\File;
+use Symfony\Component\Validator\Constraints\Image;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 use Symfony\Contracts\Translation\TranslatorInterface;
 use Symfony\Component\Form\Extension\Core\Type\DateType;
 use Symfony\Component\Form\Extension\Core\Type\FileType;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
+use Symfony\Component\Form\Extension\Core\Type\MoneyType;
+use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
 use Symfony\Component\Form\Extension\Core\Type\NumberType;
 use Symfony\Component\Form\Extension\Core\Type\IntegerType;
 
@@ -34,10 +38,14 @@ class VehiculeType extends AbstractType
                 'label' => $this->translator->trans('Date of 1st use')
             ])
             ->add('c1_titulaire', TextType::class, [
-                'label' => $this->translator->trans('Owner\'s full name')
+                'label' => $this->translator->trans('Owner\'s full name'),
             ])
-            ->add('c4_proprietaire', IntegerType::class, [
-                'label' => $this->translator->trans('Is the owner')
+            ->add('c4_proprietaire', ChoiceType::class, [
+                'label' => $this->translator->trans('Is the owner'),
+                'choices' => [
+                    'Yes' => 1,
+                    'No'  => 0
+                ]
             ])
             ->add('c4_cotitulaire', TextType::class, [
                 'label' => $this->translator->trans('Co-owner\'s full name')
@@ -198,8 +206,9 @@ class VehiculeType extends AbstractType
                 'years' => range(date('Y') - 20, date('Y') + 5),
                 'required' => false
             ])
-            ->add('valeur_achat', NumberType::class, [
-                'label' => $this->translator->trans('purchase value')
+            ->add('valeur_achat', MoneyType::class, [
+                'label' => $this->translator->trans('purchase value'),
+                'currency' => 'EUR'
             ])
             // Add "images" and "Documents" in form
             // not linked to database (mapped : false)
@@ -209,22 +218,25 @@ class VehiculeType extends AbstractType
                 'mapped' => false,
                 'required' => false,
                 'constraints' => [
-                    new File([
-
-                        'mimeTypes' => ['image/jpeg', 'image/png'],
+                    new All([
+                        new Image([
+                            'mimeTypes' => ['image/jpeg', 'image/png'],
+                        ])
                     ])
                 ]
             ])
+
             ->add('documents', FileType::class, [
                 'label' => $this->translator->trans('Documents to download'),
                 'mapped' => false,
                 'multiple' => true,
                 'required' => false,
                 'constraints' => [
-                    new File([
-
-                        'mimeTypes' => ['application/pdf', 'application/x-pdf'],
-                        'mimeTypesMessage' => $this->translator->trans('Please use a valid PDF file.')
+                    new All([
+                        new File([
+                            'mimeTypes' => ['application/pdf', 'application/x-pdf'],
+                            'mimeTypesMessage' => $this->translator->trans('Please use a valid PDF file.')
+                        ])
                     ])
                 ]
             ]);

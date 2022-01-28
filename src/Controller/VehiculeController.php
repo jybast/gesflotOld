@@ -2,8 +2,8 @@
 
 namespace App\Controller;
 
-use App\Entity\Document;
 use App\Entity\Image;
+use App\Entity\Document;
 use App\Entity\Vehicule;
 use App\Form\VehiculeType;
 use App\Repository\VehiculeRepository;
@@ -11,6 +11,7 @@ use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
+use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 
 #[Route('/vehicule')]
@@ -32,41 +33,42 @@ class VehiculeController extends AbstractController
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
-
-            // On récupère les images transmises
+            // TO DO : File upload service
+            // Get submitted files
             $images = $form->get('images')->getData();
-            // On récupère les documents transmis
+
+            // Get submitted pdf
             $documents = $form->get('documents')->getData();
 
-            // On boucle sur les images
+            // Loop images
             foreach ($images as $image) {
-                // On génère un nouveau nom de fichier
+                // set a new file name
                 $fichier = md5(uniqid()) . '.' . $image->guessExtension();
 
-                // On copie le fichier dans le dossier uploads
+                // move file into uploads
                 $image->move(
                     $this->getParameter('images_directory'),
                     $fichier
                 );
 
-                // On crée l'image dans la base de données
+                // insert file into database
                 $img = new Image();
                 $img->setNom($fichier);
                 $vehicule->addImage($img);
             }
 
-            // On boucle sur les documents
+            // Loop documents
             foreach ($documents as $document) {
-                // On génère un nouveau nom de fichier
+                // set a new file name
                 $pdf = md5(uniqid()) . '.' . $document->guessExtension();
 
-                // On copie le fichier dans le dossier uploads
+                // move file into uploads
                 $document->move(
                     $this->getParameter('documents_directory'),
                     $pdf
                 );
 
-                // On crée l'image dans la base de données
+                // insert file into database
                 $doc = new Document();
                 $doc->setNom($pdf);
                 $vehicule->addDocument($doc);
@@ -99,41 +101,41 @@ class VehiculeController extends AbstractController
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
-            // On récupère les images transmises
+            // TO DO : File upload service
+            // Get submitted images
             $images = $form->get('images')->getData();
-            // On récupère les documents transmis
+            // Get submitted documents
             $documents = $form->get('documents')->getData();
 
-            // TO DO : create a Service to manage images & documents
-            // On boucle sur les images
+            // Loop images
             foreach ($images as $image) {
-                // On génère un nouveau nom de fichier
+                // Set a new file name
                 $fichier = md5(uniqid()) . '.' . $image->guessExtension();
 
-                // On copie le fichier dans le dossier uploads
+                // move file into uploads
                 $image->move(
                     $this->getParameter('images_directory'),
                     $fichier
                 );
 
-                // On crée l'image dans la base de données
+                // insert file into database
                 $img = new Image();
                 $img->setNom($fichier);
                 $vehicule->addImage($img);
             }
 
-            // On boucle sur les documents
+            // Loop documents
             foreach ($documents as $document) {
-                // On génère un nouveau nom de fichier
+                // Set a new file name
                 $pdf = md5(uniqid()) . '.' . $document->guessExtension();
 
-                // On copie le fichier dans le dossier uploads
+                // move file into uploads
                 $document->move(
                     $this->getParameter('documents_directory'),
                     $pdf
                 );
 
-                // On crée le document dans la base de données
+                // insert file into database
                 $doc = new Document();
                 $doc->setNom($pdf);
                 $vehicule->addDocument($doc);
@@ -160,5 +162,27 @@ class VehiculeController extends AbstractController
         }
 
         return $this->redirectToRoute('vehicule_index', [], Response::HTTP_SEE_OTHER);
+    }
+
+    #[Route('/delete/image/{id}', name: 'vehicule_image_delete', methods: ['DELETE'])]
+    public function image_delete(Request $request, Image $image, EntityManagerInterface $entityManager)
+    {
+        $data = json_decode($request->getContent(), true);
+
+        // Check if token is valid
+        if ($this->isCsrfTokenValid('delete' . $image->getId(), $data['_token'])) {
+            // Get image name
+            $nom = $image->getNom();
+            // delete file from directory
+            unlink($this->getParameter('images_directory') . '/' . $nom);
+            // delete record from database
+            $entityManager->remove($image);
+            $entityManager->flush();
+
+            // Return response
+            return new JsonResponse(['success' => 1]);
+        } else {
+            return new JsonResponse(['error' => 'Token invalide'], 400);
+        }
     }
 }

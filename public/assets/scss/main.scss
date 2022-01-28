@@ -1,3 +1,31 @@
+/************************************
+/ Main.scss
+/
+************************************/
+//Common
+@import './common/_fonts.scss';
+//@import 'common/_minxi.scss';
+@import './common/_variables.scss';
+@import './common/_global.scss';
+
+//layout
+@import './layouts/_register.scss';
+
+// Responsive
+//@import 'layouts/responsive.scss';
+
+h2 {
+  line-height: 1.66;
+  margin: 0;
+    margin-bottom: 0px;
+  padding: 0;
+  font-weight: bold;
+  color: #222;
+  font-family: Poppins;
+  font-size: 36px;
+}
+
+
 @font-face {
     font-family: "Font Awesome";
     font-style: normal;
