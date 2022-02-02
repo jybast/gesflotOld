@@ -5,7 +5,11 @@ twig:
     # Translations
     globals: 
         locales: '%app.locales%'
-    
+    paths:
+        # point this wherever your images live
+        '%kernel.project_dir%/public/assets/img': images
+
+
 when@test:
     twig:
         strict_variables: true

@@ -448,7 +448,51 @@
       </trans-unit>
       <trans-unit id="w_Bmdxv" resname="Please use a valid PDF file.">
         <source>Please use a valid PDF file.</source>
-        <target>Veuillez utiliseer un fichier PDF valide.</target>
+        <target>Veuillez utiliser un fichier PDF valide.</target>
+      </trans-unit>
+      <trans-unit id="G8xXMor" resname="Your email adress">
+        <source>Your email adress</source>
+        <target>Votre adresse -e-mail</target>
+      </trans-unit>
+      <trans-unit id="aJcSg4Q" resname="Subject">
+        <source>Subject</source>
+        <target>Sujet</target>
+      </trans-unit>
+      <trans-unit id="JKqa5fI" resname="Enter your message">
+        <source>Enter your message</source>
+        <target>Entrer votre message</target>
+      </trans-unit>
+      <trans-unit id="mLZwY8_" resname="Contact Us">
+        <source>Contact Us</source>
+        <target>Nous contacter</target>
+      </trans-unit>
+      <trans-unit id="vSTb9IR" resname="Hi! Please confirm your email!">
+        <source>Hi! Please confirm your email!</source>
+        <target>Merci de confirmer votre adresse e-mail</target>
+      </trans-unit>
+      <trans-unit id="Ry3Xo6w" resname="Please confirm your email address by clicking the following link:">
+        <source>Please confirm your email address by clicking the following link:</source>
+        <target>Merci de confirmer votre adresse mail en cliquant sur le lien :</target>
+      </trans-unit>
+      <trans-unit id="ITaQX9q" resname="Confirm my Email">
+        <source>Confirm my Email</source>
+        <target>Confirmer mon e-mail</target>
+      </trans-unit>
+      <trans-unit id="isYBfbN" resname="Vehicule">
+        <source>Vehicule</source>
+        <target>Véhicule</target>
+      </trans-unit>
+      <trans-unit id="_7yY7mO" resname="Delete image">
+        <source>Delete image</source>
+        <target>Supprimer l'image</target>
+      </trans-unit>
+      <trans-unit id="KfB9mjh" resname="Let's talk about everything!">
+        <source>Let's talk about everything!</source>
+        <target>Parlons-en !</target>
+      </trans-unit>
+      <trans-unit id="kxyGzEm" resname="Please use the contact form to deliver any question.">
+        <source>Please use the contact form to deliver any question.</source>
+        <target>Merci d'utiliser le formulaire de contact pour nous adresser vos questions.</target>
       </trans-unit>
     </body>
   </file>

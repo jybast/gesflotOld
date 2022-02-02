@@ -24,6 +24,12 @@
 		<h1>Hello
 			{{ controller_name }}! ✅</h1>
 
+		<div id="form-message-success">
+			{% for message in app.flashes('message') %}
+				<div class="alert alert-info" role="alert">{{ message }}</div>
+			{% endfor %}
+		</div>
+
 		This friendly message is coming from:
 		<ul>
 			<li>Your controller at

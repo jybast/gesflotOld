@@ -7,15 +7,15 @@
 		<div class="collapse navbar-collapse" id="navbarSupportedContent">
 			<ul class="navbar-nav me-auto mb-2 mb-lg-0">
 				<li class="nav-item">
-					<a class="nav-link active" aria-current="page" href="#">{% trans %}Home{% endtrans %}
+					<a class="nav-link active" aria-current="page" href="{{ path('home')}}">{% trans %}Home{% endtrans %}
 					</a>
 				</li>
 				<li class="nav-item">
-					<a class="nav-link" href="#">{% trans %}Contact us{% endtrans %}
+					<a class="nav-link" href="{{ path('contact')}}">{% trans %}Contact us{% endtrans %}
 					</a>
 				</li>
 				<li class="nav-item">
-					<a class="nav-link" href="#">{% trans %}About us{% endtrans %}
+					<a class="nav-link" href="{{ path('about')}}">{% trans %}About us{% endtrans %}
 					</a>
 				</li>
 				<li class="nav-item dropdown">
